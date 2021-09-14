@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SideDrawerHeader extends StatelessWidget {
-  final String headerTitle;
+  final String? headerTitle;
   SideDrawerHeader({this.headerTitle});
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SideDrawerHeader extends StatelessWidget {
             bottom: 10,
             left: 10,
             child: Text(
-              headerTitle,
+              headerTitle!,
               style: TextStyle(
                 color: Colors.blueGrey[900],
                 fontSize: 25,

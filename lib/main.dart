@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pixo/src/views/UI/BodyEmptyCopyright.dart';
 import 'package:pixo/src/views/UI/NavBar.dart';
+import 'package:pixo/src/views/UI/PostsList.dart';
 import 'package:pixo/src/views/UI/SideDrawer.dart';
 
 void main() => runApp(MyApp());
@@ -19,18 +21,8 @@ class _MyHomePageState extends State<MyApp> {
         appBar: NavBar(),
         drawer: SideDrawer(),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'pixo app',
-              ),
-              Text(
-                'By adilmx',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-            ],
-          ),
+          // child: BodyEmptyCopyright(),
+          child: PostsList(),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
