@@ -32,50 +32,58 @@ class PostCard extends StatelessWidget {
           Image.asset(
             post.picture,
           ),
-          Padding(
-            padding: EdgeInsets.zero,
-            child: 
-              ListTile(
-                leading: Text(
-                  post.user.accessInfos.username + " .",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+          SizedBox(
+            width: double.infinity,
+            child: Container(
+              child: Text(
+                post.user.accessInfos.username + " .",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
           ),
-          Padding(
-            padding: EdgeInsets.zero,
-            child: ListTile(
-              leading: Text(
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: Container(
+                child: Text(
                 post.caption,
+                textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Colors.black,
                 ),
               ),
             ),
-          ),
+            ),
           ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,
+            buttonPadding: EdgeInsets.zero,
             children: [
-              TextButton(
+              IconButton(
                 onPressed: () {},
-                child: Icon(
+                icon: Icon(
                   Icons.favorite,
                 ),
+                tooltip: 'Favorite',
+                color: Colors.red[400],
               ),
-              TextButton(
+              IconButton(
                 onPressed: () {},
-                child: Icon(
+                icon: Icon(
                   Icons.comment,
                 ),
+                tooltip: 'Comment',
+                color: Colors.grey[800],
               ),
-              TextButton(
+              IconButton(
                 onPressed: () {},
-                child: Icon(
+                icon: Icon(
                   Icons.share,
                 ),
+                tooltip: 'Share',
+                color: Colors.grey[800],
               ),
             ],
           ),

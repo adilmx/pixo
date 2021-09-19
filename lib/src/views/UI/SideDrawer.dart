@@ -5,6 +5,9 @@ import 'package:pixo/src/views/UI/SideDrawerElement.dart';
 import 'SideDrawerHeader.dart';
 
 class SideDrawer extends StatelessWidget {
+  final VoidCallback _goToLogin;
+  final VoidCallback _explorePosts;
+  SideDrawer(this._goToLogin, this._explorePosts);
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -13,6 +16,16 @@ class SideDrawer extends StatelessWidget {
         children: <Widget>[
           SideDrawerHeader(
             headerTitle: "PIXO APP",
+          ),
+          SideDrawerElement(
+            elementText: "Login",
+            elementIcon: Icons.login,
+            sideBarElementPressed: _goToLogin,
+          ),
+          SideDrawerElement(
+            elementText: "Explore",
+            elementIcon: Icons.explore,
+            sideBarElementPressed: _explorePosts,
           ),
           SideDrawerElement(
             elementText: "Add New Post",
